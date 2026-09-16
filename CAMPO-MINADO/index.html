@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Minado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="start-screen">
+        <h1 id="game-title">Campo Minado</h1>
+        <div id="rules">
+            <h2>Regras do Jogo:</h2>
+            <ul>
+                <li>Clique em uma célula para revelá-la.</li>
+                <li>Evite clicar nas bombas!</li>
+                <li>O número corresponde quantas bombas estão vizinhas!</li>
+                <li>Marque possíveis bombas com bandeiras (botão direito).</li>
+                <li>Revele todas as células seguras para ganhar.</li>
+                <li>Aperte a tecla enter para começar</li>
+            </ul>
+        </div>
+    </div>
+    <div id="game">
+        <select id="nivelDificuldade">
+            <option value="facil">Fácil</option>
+            <option value="medio">Médio</option>
+            <option value="dificil">Difícil</option>
+        </select>
+        <div id="tabuleiro"></div>
+        <div id="status"></div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message">Você perdeu!</p>
+            <button id="reiniciar-jogo">Reiniciar</button>
+        </div>
+    </div>
+
+    <audio id="somTremor" src="Assets/tremer.mp3"></audio>
+    <audio id="somModal" src="Assets/gameOver.mp3"></audio>
+    <audio id="somExplosao" src="Assets/explosao.mp3"></audio>
+    <audio id="musicaFundo" src="Assets/trilhaSonora.mp3" loop></audio>
+
+    <script type="module" src="CampoMinado.js"></script>
+    <script src="telaInicio.js"></script>
+</body>
+</html>

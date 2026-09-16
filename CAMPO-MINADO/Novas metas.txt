@@ -1,0 +1,1 @@
+Atribuir ao docker e contstruir um servidor que consiga trabalhar com objetos e requisições http

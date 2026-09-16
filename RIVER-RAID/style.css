@@ -1,0 +1,12 @@
+.image-container {
+    position: relative;
+    width: 200px; /* Largura do recorte */
+    height: 200px; /* Altura do recorte */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: -60px; /* Ajuste a posição para definir o recorte */
+    left: -50px; /* Ajuste a posição para definir o recorte */
+}
