@@ -1,0 +1,217 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+    z-index: 100;
+}
+
+.modal .container {
+    background-color: black;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    width: 80%; 
+    max-width: 600px; 
+    color: white;
+}
+
+.modal .container h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 40px; 
+}
+
+
+.modal .container p {
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: white;
+    text-align: center; 
+}
+
+#iniciarJogo{
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 15px 32px; 
+    font-size: 16px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.1s ease; 
+}
+
+#titulo-frogger {
+    width: 100%; 
+    max-width: 600px; 
+    height: auto; 
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto; 
+}
+
+
+#tabuleiro-frogger {
+    background-image: url('Assets/Images/mapa/gameboard.gif');
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border: 2px solid #fff;
+    overflow: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.sapo,
+.carro,
+.tronco,
+.rio {
+    position: absolute;
+}
+
+.sapo {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    background-image: url('Assets/images/frog/frog-1.png');
+    z-index: 1;
+}
+
+.carro {
+    width: 50px;
+    height: 30px;
+    background-image: url('Assets/Images/carro/carro-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scaleX(-1);
+}
+
+.carro2 {
+    width: 50px;
+    height: 35px;
+    background-image: url('Assets/Images/carro/carro-2.png');
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.troncos, .troncos2 {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    background-image: url('Assets/Images/tronco/tronco-3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 0;
+}
+
+.rio {
+    top: 50px;
+    height: 200px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.vitoria {
+    width: 30px; 
+    height: 30px;
+    position: absolute; 
+}
+
+.vitoria.alcancado {
+    background-image: url('Assets/Images/sapoSave/sapoSave.png');
+    transition: background-color 0.3s ease; 
+    background-size: cover; 
+    background-position: center; 
+}
+
+.coracao {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url('Assets/Images/heart.png'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 2;
+}
+
+.coracao-1 {
+    bottom: 10px;
+    left: 10px;
+}
+
+.coracao-2 {
+    bottom: 10px;
+    left: 35px;
+}
+
+.coracao-3 {
+    bottom: 10px;
+    left: 60px;
+}
+
+#modal-gameover {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 1); 
+    background-image: url("Assets/Images/titulos/derrota.png");
+    background-repeat: no-repeat;
+    background-size: 100%; 
+    background-position: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 100; 
+}
+
+#modal-gameover.mostrar {
+    display: flex; 
+}
+
+
+#modal-vitoria {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    background-image: url("/Assets/Images/titulos/vitoria.png"), url("Assets/Images/titulos/vitoria.gif");
+    background-repeat: no-repeat;
+    background-size: 50%; 
+    background-position: center; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 100; 
+}
+
+
+#modal-vitoria.mostrar {
+    display: flex; 
+}
+
